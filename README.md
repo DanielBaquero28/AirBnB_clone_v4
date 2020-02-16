@@ -1,6 +1,6 @@
 <img src="https://github.com/jarehec/AirBnB_clone_v3/blob/master/dev/HBTN-hbnb-Final.png" width="160" height=auto />
 
-# AirBnB Clone: Phase # 3
+# AirBnB Clone Version #4
 
 : API with Swagger
 
@@ -27,7 +27,7 @@ application is designed to run with 2 storage engine models:
   command:
 
 ```
-$ HBNB_MYSQL_USER=hbnb_test HBNB_MYSQL_PWD=hbnb_test_pwd \
+vagrant@vagrant-ubuntu-trusty-64:~/AirBnB_clone_v4$ HBNB_MYSQL_USER=hbnb_test HBNB_MYSQL_PWD=hbnb_test_pwd \
 HBNB_MYSQL_HOST=localhost HBNB_MYSQL_DB=hbnb_test_db HBNB_TYPE_STORAGE=db \
 [COMMAND HERE]
 ```
@@ -57,12 +57,12 @@ to that configuration file.  The upstart script should be saved in the path:
 `/etc/init/[FILE_NAME.conf]`.  To begin this service, execute:
 
 ```
-$ sudo start airbnb.conf
+vagrant@vagrant-ubuntu-trusty-64:~/AirBnB_clone_v4$ sudo start airbnb.conf
 ```
 This script's main task is to execute the following `gunicorn` command:
 
 ```
-$ gunicorn --bind 127.0.0.1:8001 wsgi.wsgi:web_flask.app
+vagrant@vagrant-ubuntu-trusty-64:~/AirBnB_clone_v4$ gunicorn --bind 127.0.0.1:8001 wsgi.wsgi:web_flask.app
 ```
 
 The `gunicorn` command starts an instance of a Flask Application.
@@ -84,20 +84,20 @@ setupfiles along with a brief explanation:
 * **`dev/setup.sql`:** Drops test and dev databases, and then reinitializes
 the datbase.
 
-  * Usage: `$ cat dev/setup.sql | mysql -uroot -p`
+  * Usage: `vagrant@vagrant-ubuntu-trusty-64:~/AirBnB_clone_v4$ cat dev/setup.sql | mysql -uroot -p`
 
 * **`setup_mysql_dev.sql`:** initialiezs dev database with mysql for testing
 
-  * Usage: `$ cat setup_mysql_dev.sql | mysql -uroot -p`
+  * Usage: `vagrant@vagrant-ubuntu-trusty-64:~/AirBnB_clone_v4$ cat setup_mysql_dev.sql | mysql -uroot -p`
 
 * **`setup_mysql_test.sql`:** initializes test database with mysql for testing
 
-  * Usage: `$ cat setup_mysql_test.sql | mysql -uroot -p`
+  * Usage: `vagrant@vagrant-ubuntu-trusty-64:~/AirBnB_clone_v4$ cat setup_mysql_test.sql | mysql -uroot -p`
 
 * **`0-setup_web_static.sh`:** sets up nginx web server config file & the file
   structure.
 
-  * Usage: `$ sudo ./0-setup_web_static.sh`
+  * Usage: `vagrant@vagrant-ubuntu-trusty-64:~/AirBnB_clone_v4$ sudo ./0-setup_web_static.sh`
 
 * **`3-deploy_web_static.py`:** uses 2 functions from (1-pack_web_static.py &
   2-do_deploy_web_static.py) that use the fabric3 python integration, to create
@@ -105,7 +105,7 @@ the datbase.
   the other function to deploy the compressed web static files.  Command must
   be executed from the `AirBnB_clone` root directory.
 
-  * Usage: `$ fab -f 3-deploy_web_static.py deploy -i ~/.ssh/holberton -u ubuntu`
+  * Usage: `vagrant@vagrant-ubuntu-trusty-64:~/AirBnB_clone_v4$ fab -f 3-deploy_web_static.py deploy -i ~/.ssh/holberton -u ubuntu`
 
 ## Testing
 
@@ -116,12 +116,12 @@ All unittests are in the `./tests` directory with the command:
 
 * File Storage Engine Model:
 
-  * `$ python3 -m unittest discover -v ./tests/`
+  * `vagrant@vagrant-ubuntu-trusty-64:~/AirBnB_clone_v4$ python3 -m unittest discover -v ./tests/`
 
 * DataBase Storage Engine Model
 
 ```
-$ HBNB_MYSQL_USER=hbnb_test HBNB_MYSQL_PWD=hbnb_test_pwd \
+vagrant@vagrant-ubuntu-trusty-64:~/AirBnB_clone_v4$ HBNB_MYSQL_USER=hbnb_test HBNB_MYSQL_PWD=hbnb_test_pwd \
 HBNB_MYSQL_HOST=localhost HBNB_MYSQL_DB=hbnb_test_db HBNB_TYPE_STORAGE=db \
 python3 -m unittest discover -v ./tests/
 ```
@@ -144,7 +144,7 @@ DataBase Engine Models:
   * **Usage `init_test.sh`:**
 
 ```
-$ ./dev/init_test.sh
+vagrant@vagrant-ubuntu-trusty-64:~/AirBnB_clone_v4$ ./dev/init_test.sh
 ```
 
 ---
@@ -157,13 +157,13 @@ $ ./dev/init_test.sh
 #### File Storage Engine Model
 
 ```
-$ ./console.py
+vagrant@vagrant-ubuntu-trusty-64:~/AirBnB_clone_v4$ ./console.py
 ```
 
 #### To execute the CLI using the Database Storage Engine Model:
 
 ```
-$ HBNB_MYSQL_USER=hbnb_test HBNB_MYSQL_PWD=hbnb_test_pwd \
+vagrant@vagrant-ubuntu-trusty-64:~/AirBnB_clone_v4$ HBNB_MYSQL_USER=hbnb_test HBNB_MYSQL_PWD=hbnb_test_pwd \
 HBNB_MYSQL_HOST=localhost HBNB_MYSQL_DB=hbnb_test_db HBNB_TYPE_STORAGE=db \
 ./console.py
 ```
@@ -217,6 +217,9 @@ github repo
 * Kimberly Wong, [kjowong](https://github.com/kjowong) | [@kjowong](https://twitter.com/kjowong) | [kjowong@gmail.com](kjowong@gmail.com)
 * Carrie Ybay, [hicarrie](https://github.com/hicarrie) | [@hicarrie_](https://twitter.com/hicarrie_)
 * Jared Heck, [jarehec](https://github.com/jarehec) | [@jarehec](https://twitter.com/jarehec)
+* Daniel Baquero, [DanielBaquero28](https://github.com/DanielBaquero28) | [@DanielB30589105](https://twitter.com/DanielB30589105)
+* Luis Miguel Moreno Cano, [lucho1503](https://github.com/lucho1503)
+* José Calderón, [student369](https://github.com/student369)
 
 ## License
 
