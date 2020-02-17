@@ -219,7 +219,7 @@ github repo
 * Jared Heck, [jarehec](https://github.com/jarehec) | [@jarehec](https://twitter.com/jarehec)
 * Daniel Baquero, [DanielBaquero28](https://github.com/DanielBaquero28) | [@DanielB30589105](https://twitter.com/DanielB30589105)
 * Luis Miguel Moreno Cano, [lucho1503](https://github.com/lucho1503)
-* José Calderón, [student369](https://github.com/student369)
+* José Calderón, [student369](https://github.com/student369) | [@DJosCald58273060](https://twitter.com/JosCald58273060)
 
 ## License
 
